@@ -1,0 +1,30 @@
+body{
+	background-color: #EEEEEE;
+}
+
+.main{
+    margin-top: 80px;
+}
+
+.input-text{
+	background-color: #D3EEF1;
+	border: 1px solid #D3EEF1;
+}
+
+.input-text:focus{
+	box-shadow: none;
+	border: none;
+}
+
+.ocultar{
+    display: none;	
+}
+
+.swal2-popup{
+   font-size: 15px!important;
+}
+
+/* Validación */
+
+form label.error, label.error {color: red;font-style: italic;}
+form input.error, form textarea.error{border-color: #ff0000;} 
