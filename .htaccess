@@ -1,7 +1,10 @@
-Options +FollowSymLinks
-RewriteEngine On
+ Options +FollowSymLinks
 
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
+<IfModule mod_rewrite.c>
+  RewriteEngine On
 
-RewriteRule ^([a-z\.]*)\/?([a-zA-Z]*)\/?([0-9]*)$ router.php?var1=$1&var2=$2&var3=$3
+  # Redirect non-existent URLs
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . router.php [L]
+</IfModule>
